@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "2a1034cb-5696-47e0-89cb-09034c9ebc68",
+		"name": "Ewallet application collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26797148"
+	},
+	"item": [
+		{
+			"name": "Create customer and ewallet",
+			"protocolProfileBehavior": {
+				"disableUrlEncoding": false,
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept-encoding": true,
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.create-customer-request.api.v1+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Mantas\",\r\n    \"lastName\": \"Nacickas\",\r\n    \"email\": \"nacickasmantas2@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disableUrlEncoding": false,
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept-encoding": true,
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.create-customer-request.api.v1+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.create1-customer-response.api.v1+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Mantas\",\r\n    \"lastName\": \"Nacickas\",\r\n    \"email\": \"nacickasmantas1@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/customer/045968fd-6d46-4346-97c7-911e7de35b5d\t",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customer",
+						"045968fd-6d46-4346-97c7-911e7de35b5d\t"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit",
+			"protocolProfileBehavior": {
+				"disableUrlEncoding": false,
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept-encoding": true,
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.deposit-ewallet-request.api.v1+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 2000000,\r\n    \"description\": \"descritpion\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/ewallet/f0c0618c-cccb-4a69-b36c-05d962a97233/deposit",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ewallet",
+						"f0c0618c-cccb-4a69-b36c-05d962a97233",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw",
+			"protocolProfileBehavior": {
+				"disableUrlEncoding": false,
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept-encoding": true,
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.withdraw-ewallet-request.api.v1+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 1000,\r\n    \"description\": \"descritpion\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/ewallet/f0c0618c-cccb-4a69-b36c-05d962a97233/withdrawal",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ewallet",
+						"f0c0618c-cccb-4a69-b36c-05d962a97233",
+						"withdrawal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction",
+			"protocolProfileBehavior": {
+				"disableUrlEncoding": false,
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept-encoding": true,
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.make-transaction-ewallet-request.api.v1+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100,\r\n    \"description\": \"descritpion\",\r\n    \"destinationWalletUuid\": \"c7c3255c-be8c-420b-b6c8-afbd745daa1d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/ewallet/ca3000ba-cbb7-4f6d-8e2b-aef221b7352f/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ewallet",
+						"ca3000ba-cbb7-4f6d-8e2b-aef221b7352f",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
