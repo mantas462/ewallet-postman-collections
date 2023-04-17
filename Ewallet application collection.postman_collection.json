@@ -73,19 +73,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/vnd.create-customer-request.api.v1+json",
+						"value": "application/vnd.get-customer-request.api.v1+json",
 						"type": "text"
-					},
-					{
-						"key": "Accept",
-						"value": "application/vnd.create1-customer-response.api.v1+json",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "",
-						"type": "text",
-						"disabled": true
 					}
 				],
 				"body": {
@@ -98,7 +87,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/v1/customer/045968fd-6d46-4346-97c7-911e7de35b5d\t",
+					"raw": "localhost:8080/api/v1/customer/b811e04b-25a6-4e52-8bbe-8be3cb9722b1",
 					"host": [
 						"localhost"
 					],
@@ -107,7 +96,7 @@
 						"api",
 						"v1",
 						"customer",
-						"045968fd-6d46-4346-97c7-911e7de35b5d\t"
+						"b811e04b-25a6-4e52-8bbe-8be3cb9722b1"
 					]
 				}
 			},
@@ -181,7 +170,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"amount\": 1000,\r\n    \"description\": \"descritpion\"\r\n}",
+					"raw": "{\r\n    \"amount\": 501,\r\n    \"description\": \"descritpion\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -189,7 +178,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/v1/ewallet/f0c0618c-cccb-4a69-b36c-05d962a97233/withdrawal",
+					"raw": "localhost:8080/api/v1/ewallet/2666fddf-384b-4311-bc64-907d862aef78/withdrawal",
 					"host": [
 						"localhost"
 					],
@@ -198,7 +187,7 @@
 						"api",
 						"v1",
 						"ewallet",
-						"f0c0618c-cccb-4a69-b36c-05d962a97233",
+						"2666fddf-384b-4311-bc64-907d862aef78",
 						"withdrawal"
 					]
 				}
@@ -227,7 +216,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"amount\": 100,\r\n    \"description\": \"descritpion\",\r\n    \"destinationWalletUuid\": \"c7c3255c-be8c-420b-b6c8-afbd745daa1d\"\r\n}",
+					"raw": "{\r\n    \"amount\": 1001,\r\n    \"description\": \"descritpion\",\r\n    \"destinationWalletUuid\": \"72d45393-cb99-41cc-a5ab-27a437034aee\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -235,7 +224,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/v1/ewallet/ca3000ba-cbb7-4f6d-8e2b-aef221b7352f/transaction",
+					"raw": "localhost:8080/api/v1/ewallet/2666fddf-384b-4311-bc64-907d862aef78/transaction",
 					"host": [
 						"localhost"
 					],
@@ -244,7 +233,7 @@
 						"api",
 						"v1",
 						"ewallet",
-						"ca3000ba-cbb7-4f6d-8e2b-aef221b7352f",
+						"2666fddf-384b-4311-bc64-907d862aef78",
 						"transaction"
 					]
 				}
